@@ -1,0 +1,49 @@
+package placement;
+import java.util.*;
+public class expression_validation {
+ static boolean isvalid(String s1) {
+		Stack<Character> st=new Stack<>();
+		boolean flag=true;
+		
+		for(char ch : s1.toCharArray()) {
+			if(ch=='[' || ch=='(' || ch=='{') {
+				st.push(ch);
+				
+			}
+			if(ch=='}' && !st.isEmpty() ) {
+				char c=st.pop();
+				if(c!='{') {
+					flag=false;
+					break;
+				}
+			}
+			if(ch==')' && !st.isEmpty() ) {
+				char c=st.pop();
+				if(c!='(') {
+					flag=false;
+					break;
+				}
+			}
+			if(ch==']'&& !st.isEmpty() ) {
+				char c=st.pop();
+				if(c!='[') {
+					flag=false;
+					break;
+				}
+			}
+		}
+		return flag;
+ }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1="[(a+b)*(c-d)+{(e-f)+(g/h)}]";
+		String s2="[{(a+b)-(c*d)-((e-f)*(g+h))]";
+		String s3="[(a+b})";
+		System.out.println(isvalid(s1));
+		System.out.println(isvalid(s2));
+		System.out.println(isvalid(s3));
+		
+
+	}
+
+}
