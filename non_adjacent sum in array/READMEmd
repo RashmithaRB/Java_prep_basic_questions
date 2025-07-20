@@ -2,7 +2,8 @@
 
 This Java program calculates the **maximum sum of non-adjacent elements** from a given integer array. It follows a greedy approach by summing alternating elements in two different passes and selecting the higher total.
 
-sum1 calculates even number of indices;
+sum1 calculates sum of numbers in even  of indices;
+sum2 calculates sum of numbers in odd indices;
 ---
 
 ## 📋 Problem Statement
