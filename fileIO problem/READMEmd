@@ -1,0 +1,51 @@
+# 📄 File I/O with Regex for Mobile Number Extraction
+
+This Java program reads text from a file, searches for valid Indian mobile numbers using **Regular Expressions (Regex)**, and prints all matches found in the file along with the total count.
+
+---
+
+## 📌 Objective
+
+- Read a `.txt` file line-by-line.
+- Use a **Regex Pattern** to identify mobile numbers.
+- Match mobile numbers with or without country codes (`0` or `91` prefix).
+- Count and display the number of matches found.
+
+---
+
+## 🧠 Logic & Regex Breakdown
+
+### ✅ Regex Pattern:
+```regex
+(0|91)?[6-9][0-9]{9}
+```
+
+🔍 Explanation:
+(0|91)? → optional country code (either 0 or 91)
+
+[6-9] → first digit of Indian mobile number (valid range: 6–9)
+
+[0-9]{9} → exactly 9 digits following the first one (total: 10 digits)
+
+🧾 Example Content (abc.txt):
+Contact us at 9876543210 or 0919988776655
+
+This is not a number: 1234567890
+
+Another number: 8088480052 and 919191919191
+
+✅ Output:
+```bash
+9876543210
+8088480052
+count: 2
+```
+
+⚙️ How It Works
+Compile the regex pattern for Indian mobile numbers.
+
+Read the file using BufferedReader line-by-line.
+
+Use Matcher to apply regex on each line.
+
+Print matching numbers and count them.
