@@ -63,5 +63,5 @@ s = s.replaceAll("[\\s@:,-]", "").toLowerCase().trim();
 🔹 Step 2: Reverse the Cleaned String:
 Create a reversed version of the cleaned string using StringBuilder:
 
-tep 3: Compare Original vs Reversed:
+step 3: Compare Original vs Reversed:
 Check if the cleaned string matches its reversed version:
