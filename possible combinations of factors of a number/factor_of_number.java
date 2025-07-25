@@ -18,7 +18,7 @@ public class factor_of_number {
 		ArrayList a=new ArrayList();
 		int sq=(int)Math.sqrt(n);
 		
-		for(int i=2;i<=sq+1;i++) {
+		for(int i=2;i<=sq;i++) {
 			
 			while(n%i==0 ) {
 				s=s+i+" ";
@@ -26,6 +26,9 @@ public class factor_of_number {
 				a.add(i);
 				n=n/i;
 			}
+		}
+		if(n>1){
+			a.add(n);
 		}
 		res.add(a);
 
