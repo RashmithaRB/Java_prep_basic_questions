@@ -41,7 +41,7 @@ placement/
 
 "aab" (b alone is invalid)
 
-💡 How It Works
+💡 Working of code
 The program uses a regular expression to match the string pattern:
 
 ```java
