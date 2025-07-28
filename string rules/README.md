@@ -65,7 +65,7 @@ This ensures all rules are enforced, especially the 'bb' being followed only by 
 🧠 Regex Brackets Quick Reference
 Bracket Type	Usage
 [] (Square)	Character set: [abc] matches 'a' or 'b' or 'c'
-() (Parentheses)	Grouping or alternation: `(a
+() (Parentheses)	Grouping or alternation: `(a)
 {} (Curly)	Quantifiers: a{2} matches exactly two 'a's
 ^ and $	Anchors: ^a...z$ ensures string starts with 'a' and ends with 'z'
 
